@@ -55,15 +55,17 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="MgD-H3-Dlw"/>
                                     <constraint firstAttribute="height" constant="60" id="usp-CO-EuZ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="START">
-                                    <fontDescription key="titleFontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="changeTrafficLightsColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1pO-uu-LS4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kpP-DF-mqg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0JI-qj-tr9"/>
                             <constraint firstItem="fmI-Ua-pWO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="H3R-qA-uj3"/>
@@ -72,13 +74,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startButton" destination="kpP-DF-mqg" id="VpS-OO-BUp"/>
                         <outlet property="trafficLightRed" destination="L8r-m7-Za0" id="5dm-Zp-YGi"/>
-                        <outlet property="trafficLighte" destination="fmI-Ua-pWO" id="62f-qR-QrL"/>
                         <outlet property="trafficLightsGreen" destination="hXR-TB-Lt9" id="0bs-gj-Whz"/>
                         <outlet property="trafficLightsYellow" destination="P4V-LZ-QdG" id="uzf-8N-ayD"/>
-                        <outletCollection property="trafficLights" destination="fmI-Ua-pWO" collectionClass="NSMutableArray" id="RTZ-3X-IUM"/>
-                        <outletCollection property="trafficLights" destination="fmI-Ua-pWO" collectionClass="NSMutableArray" id="Djh-WX-om5"/>
-                        <outletCollection property="trafficLights" destination="fmI-Ua-pWO" collectionClass="NSMutableArray" id="Wt7-qv-cTQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
