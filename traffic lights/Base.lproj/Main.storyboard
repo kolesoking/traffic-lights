@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="traffic_lights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fmI-Ua-pWO" userLabel="Traffic Lights">
+                                <rect key="frame" x="147" y="66" width="120" height="392"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-m7-Za0">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="iRj-ND-xPU"/>
+                                            <constraint firstAttribute="height" constant="120" id="nQz-j5-5xo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4V-LZ-QdG">
+                                        <rect key="frame" x="0.0" y="136" width="120" height="120"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="fh5-AN-iC7"/>
+                                            <constraint firstAttribute="width" constant="120" id="hmr-gs-yMJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-TB-Lt9">
+                                        <rect key="frame" x="0.0" y="272" width="120" height="120"/>
+                                        <color key="backgroundColor" red="0.0" green="0.7803921568627451" blue="0.023768749592022843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="8yk-K6-xhe"/>
+                                            <constraint firstAttribute="height" constant="120" id="Iqs-GS-rVo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="9BY-Xd-QPQ"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpP-DF-mqg">
+                                <rect key="frame" x="97" y="752" width="220" height="60"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="MgD-H3-Dlw"/>
+                                    <constraint firstAttribute="height" constant="60" id="usp-CO-EuZ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="30"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kpP-DF-mqg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0JI-qj-tr9"/>
+                            <constraint firstItem="fmI-Ua-pWO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="H3R-qA-uj3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kpP-DF-mqg" secondAttribute="bottom" constant="50" id="ms9-yx-WeB"/>
+                            <constraint firstItem="fmI-Ua-pWO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xjE-XO-UaC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="trafficLightRed" destination="L8r-m7-Za0" id="5dm-Zp-YGi"/>
+                        <outlet property="trafficLighte" destination="fmI-Ua-pWO" id="62f-qR-QrL"/>
+                        <outlet property="trafficLightsGreen" destination="hXR-TB-Lt9" id="0bs-gj-Whz"/>
+                        <outlet property="trafficLightsYellow" destination="P4V-LZ-QdG" id="uzf-8N-ayD"/>
+                        <outletCollection property="trafficLights" destination="fmI-Ua-pWO" collectionClass="NSMutableArray" id="RTZ-3X-IUM"/>
+                        <outletCollection property="trafficLights" destination="fmI-Ua-pWO" collectionClass="NSMutableArray" id="Djh-WX-om5"/>
+                        <outletCollection property="trafficLights" destination="fmI-Ua-pWO" collectionClass="NSMutableArray" id="Wt7-qv-cTQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="84"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
